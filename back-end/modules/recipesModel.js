@@ -9,7 +9,7 @@ const Recipe = sequelize.define("category", {
     },
     name: {
         type: DataTypes.STRING,
-        allowNull: true,
+        allowNull: false,
     },
     author_id: {
         type: DataTypes.INTEGER,
@@ -17,11 +17,11 @@ const Recipe = sequelize.define("category", {
     },
     ingredients: {
         type: DataTypes.STRING,
-        allowNull: true,
+        allowNull: false,
     },
     instructions: {
         type: DataTypes.STRING,
-        allowNull: true,
+        allowNull: false,
     },
 }, {
     timestamps: true
