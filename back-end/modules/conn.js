@@ -1,7 +1,15 @@
 const { Sequelize } = require("sequelize")
 
-const sequelize = new Sequelize("cooking", "postgres", "lego", {
-    host: "localhoast",
+require('dotenv').config()
+
+const user = process.env.DB_USER
+const password = process.env.DB_PASSWORD
+const host = process.env.DB_HOST
+const port = process.env.DB_PORT
+
+const sequelize = new Sequelize("cooking", user, password, {
+    host: host,
+    port: port,
     dialect: "postgres"
 })
 
