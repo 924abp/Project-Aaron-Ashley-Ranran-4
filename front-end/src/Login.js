@@ -2,6 +2,7 @@ import { useRef, useState, useEffect, useContext } from 'react';
 import AuthContext from "./context/AuthProvider";
 
 import axios from './api/axios';
+import { Link } from 'react-router-dom';
 const LOGIN_URL = '/auth';
 
 const Login = () => {
@@ -34,7 +35,7 @@ const Login = () => {
                 }
             );
             console.log(JSON.stringify(response?.data));
-            //console.log(JSON.stringify(response));
+           
             const accessToken = response?.data?.accessToken;
             const roles = response?.data?.roles;
             setAuth({ user, pwd, roles, accessToken });
@@ -62,7 +63,7 @@ const Login = () => {
                     <h1>You are logged in!</h1>
                     <br />
                     <p>
-                        <a href="#">Go to Home</a>
+                        <a href="/#">Go to Home</a>
                     </p>
                 </section>
             ) : (
@@ -94,8 +95,8 @@ const Login = () => {
                     <p>
                         Need an Account?<br />
                         <span className="line">
-                            {/*put router link here*/}
-                            <a href="#">Sign Up</a>
+                        
+                            <a href="/#">Forgot Passwword?</a>   <Link to="/signup"> Sign up</Link>
                         </span>
                     </p>
                 </section>
