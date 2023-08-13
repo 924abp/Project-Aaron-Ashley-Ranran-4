@@ -1,4 +1,3 @@
-const { where } = require("sequelize")
 const Recipe = require("../modules/recipesModel")
 
 exports.getAllRecipes = async (req, res) => {
