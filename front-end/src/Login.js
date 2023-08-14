@@ -105,4 +105,8 @@ const Login = () => {
     )
 }
 
+<<<<<<< HEAD
 export default Login
+=======
+export default Login
+>>>>>>> 78ae43677421fa336ba3ca2229290b58f0304f5c
