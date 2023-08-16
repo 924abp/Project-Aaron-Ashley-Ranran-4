@@ -1,10 +1,10 @@
 // Recipe.js
 import React, { useState, useEffect } from 'react';
-import AuthorInformation from './AuthorInformation';
-import AuthorForm from './AuthorForm';
-import RecipeForm from './RecipeForm';
+import AuthorInformation from '../../components/AuthorInformation';
+import AuthorForm from '../../components/AuthorForm';
+import RecipeForm from '../../components/RecipeForm';
 
-function Recipe() {
+function EditRecipe() {
     const [author, setAuthor] = useState({});
     const [newAuthor, setNewAuthor] = useState({
       username: '',
@@ -56,13 +56,13 @@ function Recipe() {
 
   return (
     <div className="Recipe">
-      <h1>Recipe App</h1>
+      <h1>Edit Recipe</h1>
       <AuthorInformation author={author} />
-      <AuthorForm
+      {/* <AuthorForm                          an Author is a user so they would be created on the register page.
         newAuthor={newAuthor}
         handleInputChange={handleInputChange}
         createAuthor={createAuthor}
-      />
+      /> */} 
       <RecipeForm
         image={recipeImage}
         newRecipe={newRecipe}
@@ -75,4 +75,4 @@ function Recipe() {
   );
 }
 
-export default Recipe;
+export default EditRecipe;
