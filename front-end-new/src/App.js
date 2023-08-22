@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import EditRecipe from './pages/editRecipe/index';
+import Login from './pages/login/index';
+import Register from './pages/register/index';
+import Home from './pages/home/index';
+import Recipe from './pages/recipe/index';
+import AddRecipe from './pages/addRecipe';
+import YourRecipes from './pages/YourRecipes';
+import AuthorRecipes from './pages/authorRecipes';
+import AccountSettings from './pages/accountSettings';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />}></Route>
+          <Route path='/signin' element={<Login />}></Route>
+          <Route path='/signup' element={<Register />}></Route>
+          <Route path='/recipe' element={<AddRecipe />}></Route>
+          <Route path='/recipe/:id' element={<Recipe />}></Route>
+          <Route path='/recipe/:id/edit' element={<EditRecipe />}></Route>
+          <Route path='/author' element={<YourRecipes />}></Route>
+          <Route path='/author/:id' element={<AuthorRecipes />}></Route>
+          <Route path='/acount' element={<AccountSettings />}></Route>
+        </Routes>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
