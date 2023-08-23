@@ -1,12 +1,10 @@
 import React from 'react'
+import CardList from '../../components/CardList'
 
 export default function AuthorRecipes() {
   return (
     <div>
-        <h1>Recipy name</h1>
-        <img src=""></img>
-        <p>ingreadients</p>
-        <p>instructions</p>
+      <CardList/>
     </div>
   )
 }

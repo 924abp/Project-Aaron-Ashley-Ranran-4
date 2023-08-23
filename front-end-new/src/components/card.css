@@ -1,0 +1,33 @@
+.card{
+    display: inline-block;
+    background-color: white;
+    padding: 24px;
+    color: black;
+    min-width: 500px;
+    width: 500px;
+    height: 300px;
+    margin: 24px;
+}
+
+img{
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+}
+
+hr{
+    margin-bottom: 12px;
+}
+
+.flex{
+    display: flex;
+}
+
+.list{
+    flex-grow: 1;
+    padding-left: 24px;
+}
+
+.flexbox{
+    display: flexbox;
+}

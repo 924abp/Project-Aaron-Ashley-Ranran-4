@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+/* div {
+    border: 2px solid black;
+} */
+
 html {
     font-family: 'Nunito', sans-serif;
     font-size: 22px;
