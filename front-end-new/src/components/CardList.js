@@ -1,20 +1,27 @@
 import React from 'react'
-import "./card.css"
-import RecipeCard from './RecipeCard'
+import "./cardList.css"
 
-function CardList({
-}) {
+function CardList({recipyList}) {
   return (
     <div className='flexbox'>
-        <RecipeCard/>
-        <RecipeCard/>
-        <RecipeCard/>
-        <RecipeCard/>
-        <RecipeCard/>
-        <RecipeCard/>
-        <RecipeCard/>
-        <RecipeCard/>
-        <RecipeCard/>
+      {recipyList &&
+        recipyList.map((recipy) => (
+          <div className='card'>
+            <h3>{recipy.name}</h3>
+            <hr/>
+            <div className='flex'>
+              <img></img>
+              <div className='list'>
+                {recipy.ingredientList &&
+                  recipy.ingredientList.map((ingredient) => (
+                    <p>{ingredient}</p>
+                  ))
+                }
+              </div>
+            </div>
+          </div>
+        ))
+      }
     </div>
   );
 }

@@ -1,5 +1,15 @@
 CREATE DATABASE cooking;
 
+CREATE TABLE authors (
+            id SERIAL NOT NULL,
+            username VARCHAR(255) UNIQUE NOT NULL,
+            password VARCHAR(255) NOT NULL,
+            name VARCHAR(255),
+            PRIMARY KEY (id)
+        );
+
+drop table recipes;
+
 CREATE TABLE recipes (
             id SERIAL NOT NULL,
             name VARCHAR(255) NOT NULL,
@@ -13,10 +23,8 @@ CREATE TABLE recipes (
                 ON UPDATE CASCADE
         );
 
-CREATE TABLE authors (
-            id SERIAL NOT NULL,
-            username VARCHAR(255) UNIQUE NOT NULL,
-            password VARCHAR(255) NOT NULL,
-            name VARCHAR(255),
-            PRIMARY KEY (id)
-        );
+
+
+INSERT INTO authors (username, password, name) VALUES ('bob', 'incorect', 'bob');
+
+INSERT INTO recipes (name, author_id, ingredients, instructions) VALUES ('soup', 1, 'water potatos friedBeef onions cheeze garlic celery', 'mix all the ingreadients');
